@@ -56,7 +56,7 @@ but you could also use a gif to better handle ie8*/
 	width:32px;
 	height:32px;
 	top:6px;
-	left:550px;
+	left:6px;
 	border:5px solid rgba(128,128,128,0.9);
 	opacity:.9;
 	border-top:5px solid rgba(0,0,0,0);
@@ -94,4 +94,5 @@ but you could also use a gif to better handle ie8*/
     background:#000;
     margin:0;
     padding:0.25em 0.5em;
+    opacity: 0.4;
 }

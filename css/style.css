@@ -18,10 +18,10 @@ the images will fade over one another and not move.
 */
 #kenburns-slideshow {
 	position: absolute;
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
 	z-index: 1;
 	overflow: hidden;
 }
@@ -87,11 +87,11 @@ but you could also use a gif to better handle ie8*/
 #slide-title{
 	float:left;
 	color:#fff;
-  z-index:2;
-  position:absolute;
-  bottom:1em;
-  left:1em;
-  background:#000;
-  margin:0;
-  padding:0.25em 0.5em;
+    z-index:2;
+    position:absolute;
+    top:1em;
+    right:1em;
+    background:#000;
+    margin:0;
+    padding:0.25em 0.5em;
 }

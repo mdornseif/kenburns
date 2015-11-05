@@ -65,9 +65,7 @@
         var list = this.options.images;
         var that = this;
 
-        this.width = $(this.element).width();
-        this.height = $(this.element).height();
-
+        setupSize(this)
         this.has3d = has3DTransforms();
 
         for (i in list) {
@@ -81,6 +79,19 @@
         loader.addClass('loader');
         loader.css({'position':'absolute','z-index':10000});
         $(this.element).prepend(loader);
+
+        // ensure that window resizing restarts calculation
+        // will result in updated display after next image
+        var resizeTimer;
+        $(window).resize(function() {
+          clearTimeout(resizeTimer);
+          resizeTimer = setTimeout(function() {setupSize(that)}, 100);
+        });
+
+        function setupSize(that) {
+          that.width = $(that.element).width();
+          that.height = $(that.element).height();
+        };
     };
 
 
@@ -211,7 +222,7 @@
 	    currentSlide = start_index; //current slide
 
         that.doTransition();
-		this.interval = setInterval(function(){
+		    this.interval = setInterval(function(){
 
             //Advance the current slide
             if(currentSlide < that.maxSlides-1){
